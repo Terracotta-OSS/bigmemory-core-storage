@@ -19,7 +19,7 @@ The Initial Developer of the Covered Software is
   <parent>
     <groupId>org.terracotta.forge</groupId>
     <artifactId>forge-parent</artifactId>
-    <version>3.18</version>
+    <version>3.19</version>
   </parent>
 
   <groupId>org.terracotta.internal</groupId>
