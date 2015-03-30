@@ -24,17 +24,13 @@ The Initial Developer of the Covered Software is
 
   <groupId>org.terracotta.internal</groupId>
   <artifactId>bigmemory-core-storage</artifactId>
-  <version>2.0.0</version>
+  <version>2.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
   <name>BigMemory Core Storage Implementation</name>
   <description>Terracotta Server Array storage back-end based on offheap-store</description>
 
   <properties>
-  
-    <metadata.build.jenkins.url>http://jenkins.terracotta.eur.ad.sag:8080/job/bigmemory-core-storage_trunk_releaser/9/</metadata.build.jenkins.url>
-    <metadata.build.maven.active.profiles>terracotta-repositories,release,tc-publish</metadata.build.maven.active.profiles>
-    <metadata.svn.revision>47123</metadata.svn.revision>
   </properties>
 
   <licenses>
