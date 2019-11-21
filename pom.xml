@@ -19,7 +19,7 @@ The Initial Developer of the Covered Software is
   <parent>
     <groupId>org.terracotta.forge</groupId>
     <artifactId>forge-parent</artifactId>
-    <version>4.10</version>
+    <version>4.12</version>
   </parent>
 
   <groupId>org.terracotta.internal</groupId>
@@ -44,7 +44,7 @@ The Initial Developer of the Covered Software is
     <dependency>
       <groupId>org.terracotta.internal</groupId>
       <artifactId>core-storage-api</artifactId>
-      <version>1.4</version>
+      <version>1.5</version>
     </dependency>
     <dependency>
       <groupId>org.terracotta</groupId>
@@ -52,7 +52,29 @@ The Initial Developer of the Covered Software is
       <version>2.5.0</version>
     </dependency>
   </dependencies>
-  
+
+  <profiles>
+    <profile>
+      <id>testVM</id>
+      <activation>
+        <property>
+          <name>testVM</name>
+        </property>
+      </activation>
+      <build>
+        <plugins>
+          <plugin>
+            <groupId>org.apache.maven.plugins</groupId>
+            <artifactId>maven-surefire-plugin</artifactId>
+            <configuration>
+              <jvm>${testVM}</jvm>
+            </configuration>
+          </plugin>
+        </plugins>
+      </build>
+    </profile>
+  </profiles>
+
   <repositories>
     <repository>
       <id>terracotta-snapshots</id>
