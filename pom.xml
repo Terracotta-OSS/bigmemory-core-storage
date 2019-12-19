@@ -19,7 +19,7 @@ The Initial Developer of the Covered Software is
   <parent>
     <groupId>org.terracotta.forge</groupId>
     <artifactId>forge-parent</artifactId>
-    <version>4.12</version>
+    <version>4.13</version>
   </parent>
 
   <groupId>org.terracotta.internal</groupId>
@@ -53,27 +53,23 @@ The Initial Developer of the Covered Software is
     </dependency>
   </dependencies>
 
-  <profiles>
-    <profile>
-      <id>testVM</id>
-      <activation>
-        <property>
-          <name>testVM</name>
-        </property>
-      </activation>
-      <build>
-        <plugins>
-          <plugin>
-            <groupId>org.apache.maven.plugins</groupId>
-            <artifactId>maven-surefire-plugin</artifactId>
-            <configuration>
-              <jvm>${testVM}</jvm>
-            </configuration>
-          </plugin>
-        </plugins>
-      </build>
-    </profile>
-  </profiles>
+  <build>
+    <plugins>
+      <plugin>
+        <groupId>org.terracotta</groupId>
+        <artifactId>maven-forge-plugin</artifactId>
+        <executions>
+          <execution>
+            <id>default-test</id>
+            <phase>test</phase>
+            <goals>
+              <goal>test</goal>
+            </goals>
+          </execution>
+        </executions>
+      </plugin>
+    </plugins>
+  </build>
 
   <repositories>
     <repository>
