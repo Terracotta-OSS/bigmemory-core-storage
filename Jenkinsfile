@@ -17,6 +17,6 @@
 
 //Jenkins integration.
 //See https://svn.terracotta.org/repo/internal/infrastructure/jenkins-pipeline-job-builder/trunk/shared/vars/
-mavenBuild jdk: 'JDK_1.6', maven: 'Maven 3.1.1', maven_goal: 'clean verify'
+mavenBuild(jdk:8)
 
 
